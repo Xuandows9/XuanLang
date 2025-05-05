@@ -33,6 +33,17 @@ def main():
     codes=[]
     codes=f.read()
     codes=codes.replace("\n","")
+    temp=[]
+    temp_a=False
+    for char in codes:
+        if char=="\"":
+            temp_a=not temp_a
+        elif temp_a:
+            temp.append(char)
+        elif char not in string.whitespace:
+            temp.append(char)
+    codes="".join(temp)      
+            
     codes=codes.split(";")
     codes=codes[0:-1] if codes[-1]=="" else codes
     for code in codes:
