@@ -1,0 +1,4 @@
+print(a,b,c);
+import(os);
+chdir("C:\\Users\\Administrator\\Desktop\\python");
+system("python test.py");
